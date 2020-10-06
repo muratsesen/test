@@ -1,0 +1,10 @@
+.card-main{
+    text-align: center;
+}
+.card-main .title, .text{
+    color: black;
+    font-family: sans-serif;
+}
+.title{
+    font-weight: 600;
+}

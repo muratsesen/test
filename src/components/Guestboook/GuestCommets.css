@@ -1,0 +1,17 @@
+.comment-title{
+    margin-bottom: .75rem;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 1.25rem;
+}
+
+.comment-date{
+    float: right;
+    color: #6c757d!important;
+}
+.row{
+    color: black;
+}
+.card-body{
+    padding: .5rem !important;
+}

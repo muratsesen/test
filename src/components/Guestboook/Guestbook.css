@@ -1,0 +1,11 @@
+.main{
+    background-color: #2f2f2f;
+    min-height: 20rem;
+
+}
+.main .forms{
+    padding: 20px 20px 20px 20px;
+}
+.title{
+    text-align: center;
+}

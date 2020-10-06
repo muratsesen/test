@@ -1,0 +1,9 @@
+.card-table-success{
+    border-top: 2px solid green;
+}
+.card-table-secondary{
+    border-top: 2px solid gray;
+}
+.card-table-danger{
+    border-top: 2px solid red;
+}

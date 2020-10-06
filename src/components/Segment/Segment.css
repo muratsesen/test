@@ -1,0 +1,30 @@
+.title {
+    padding: 1em 5em 0em 5em;
+    text-align: center;
+}
+.title h1{
+    color: darkgray;
+}
+
+.boxes{
+    color: black;
+    padding: 2em 1em 2em 5em;
+}
+
+.box-content{
+    background-color: #ebebeb;
+    min-height: 300px;
+    padding: 2em 1em 2em 1em;
+
+}
+.arrow{
+    text-align: center;
+}
+.triangle-down{
+    width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+    border-top: 30px solid #a70f0c;
+    margin: auto;
+}
