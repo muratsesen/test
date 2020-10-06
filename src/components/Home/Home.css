@@ -3,19 +3,22 @@
   text-align: center;
   min-height: 100vh;
 }
+
+
+@media only screen and (max-width: 900px) {
+  .logo {
+    margin-top: 0px !important;
+  }
+  .second-text h1 {
+    font-size: 50px !important;
+  }
+}
 @media only screen and (min-width: 900px) {
-  .img-fluid {
-    max-width: 100%;
-    height: auto;
-    position: absolute;
-    top: 6%;
+  .logo {
+    margin-top: -80px !important;
   }
 }
 
-
-.logo {
-  margin-top: -80px !important;
-}
 .first-text {
   padding-top: 1rem;
 }

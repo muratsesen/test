@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { Navbar, Nav } from "react-bootstrap";
+import { NavLink, Router } from 'react-router-dom';
 import "./Topbar.css";
-const Topbar = ({ page }) => {
-  console.log("x:",window.screenX);
-  console.log("y:",window.screenY);
+const Topbar = ({ page,onPageChange }) => {
+
   const [scrolled, setScrolled] = React.useState(false);
   const handleScroll = () => {
     const offset = window.scrollY;
@@ -15,7 +15,7 @@ const Topbar = ({ page }) => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    //window.addEventListener("scroll", handleScroll);
   });
   let navbarClasses = ["navbar"];
   if (scrolled) {
@@ -30,9 +30,11 @@ const Topbar = ({ page }) => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="#home">HOME</Nav.Link>
-          <Nav.Link href="#segment">SEGMENT</Nav.Link>
-          <Nav.Link href="#guestbook">GUESTBOOK</Nav.Link>
+      
+          <NavLink exact activeClassName='active-link' to="/">HOME</NavLink>
+          <NavLink exact activeClassName='active-link' to="/segment">SEGMENT</NavLink>
+          <NavLink exact activeClassName='active-link' to="/guestbook">GUESTBOOK</NavLink>
+      
         </Nav>
         
       </Navbar.Collapse>

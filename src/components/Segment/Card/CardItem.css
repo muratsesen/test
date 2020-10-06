@@ -8,3 +8,10 @@
 .title{
     font-weight: 600;
 }
+.text{
+    padding-left: 60px !important;
+    padding-top: 10px;
+    padding-right: 60px !important;
+    padding-bottom: 10px;
+    opacity: 0.5;
+}

@@ -12,7 +12,7 @@ const CardItem = (props) => {
    
       <Col sm={12} xs={12} lg={12}><span className="title">{title}</span></Col>
     
-      <Col sm={12} xs={12} lg={12}><span className="text">{text}</span></Col>
+      <Col sm={12} xs={12} lg={12} className="text"><span>{text}</span></Col>
     </Row>
     </div>
   );

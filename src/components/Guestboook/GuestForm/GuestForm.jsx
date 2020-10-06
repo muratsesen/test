@@ -19,7 +19,7 @@ const GuestForm = ({onSubmit}) => {
       <Card.Body>
         <Form onSubmit={(e)=>{
             e.preventDefault();
-            onSubmit({name,date:moment().format('L'),subject,message});
+            onSubmit({name,date:moment().format('DD/MM/YY-hh:mm.ss'),subject,message});
             resetName();
             resetSubject();
             resetMessage();

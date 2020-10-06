@@ -22,9 +22,13 @@
 .card-detail-main{
     height: 415px;
 }
-
-.card-detail-main button{
-    position: absolute;
-right:    0;
-bottom:   0;
+.card-detail-main{
+    display: flex;
+  flex-direction: column;
+}
+#table{
+    flex-grow: 1;
+}
+#button{
+ margin-bottom: 5px;
 }

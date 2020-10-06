@@ -2,3 +2,10 @@
     background-color: #131313;
     color: #181818;
 }
+.footer span{
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 36px;
+    letter-spacing: 2px;
+}

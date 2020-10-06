@@ -12,7 +12,7 @@ const Home = () =>{
         <Container>
         <Row className="logo">
           <Col>
-          <img  src="/images/logos.png" alt="logo"></img>
+          <img  src="/images/logo.png" alt="logo"></img>
           </Col>
         </Row>
           <Row className="first-text">

@@ -15,12 +15,7 @@ font-weight: 1000;
   align-items: center;
   transition: all .7s ease-in;
 }
-.scrolled{
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    z-index: 99;
-  }
+
 .nav-link{
     color: #070707 !important;
 }
@@ -28,10 +23,20 @@ font-weight: 1000;
 .mr-auto{
     margin-left: 50px;
 }
-.active{
+.active-link{
     color: beige !important;
 }
 
 .nav-link a:hover{
     color: beige !important;
+}
+.navbar-nav a{
+    color: #070707;
+    text-decoration: none;
+    margin-left: 0.5em;
+}
+.navbar-nav a:hover{
+    color: beige !important;
+    text-decoration: none;
+
 }

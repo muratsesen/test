@@ -9,31 +9,43 @@ const CardDetail = (props) => {
   const getButton = () => {
     if (option === "success") {
       return (
-        <>
-          <Table option="card-table-success" data={data}/>
-          <Button variant="success" className="button-success">
-            {btnText}
-          </Button>
-        </>
+        <div id="main">
+          <div id="table">
+            <Table option="card-table-success" data={data} />
+          </div>
+          <div id="button">
+            <Button variant="success" className="button-success">
+              {btnText}
+            </Button>
+          </div>
+        </div>
       );
     }
     if (option === "secondary") {
       return (
         <>
-          <Table option="card-table-secondary" data={data}/>
-          <Button variant="secondary" className="button-secondary">
-            {btnText}
-          </Button>
+          <div id="table">
+            <Table option="card-table-secondary" data={data} />
+          </div>
+          <div id="button">
+            <Button variant="secondary" className="button-secondary">
+              {btnText}
+            </Button>
+          </div>
         </>
       );
     }
     if (option === "danger") {
       return (
         <>
-          <Table option="card-table-danger" data={data}/>
-          <Button variant="danger" className="button-danger">
-            {btnText}
-          </Button>
+          <div id="table">
+            <Table option="card-table-danger" data={data} />
+          </div>
+          <div id="button">
+            <Button variant="danger" className="button-danger">
+              {btnText}
+            </Button>
+          </div>
         </>
       );
     }

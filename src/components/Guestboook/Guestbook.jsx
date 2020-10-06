@@ -8,9 +8,7 @@ import MockData from "../../helpers/data";
 const Guestbook = () =>{
   const[data,setData] = useState(MockData);
   const onSubmit = (newData) => {
-    console.log(newData);
     MockData.push(newData);
-    console.log(MockData);
     setData([...MockData],newData);
   }
  
