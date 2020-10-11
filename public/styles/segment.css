@@ -2,46 +2,53 @@
     padding: 1em 5em 0em 5em;
     text-align: center;
 }
-.title h1{
+
+.title h1 {
     color: darkgray;
 }
 
-.boxes{
+.boxes {
     color: black;
-    
+
 }
 
-.box-content{
+.box-content {
     background-color: #ebebeb;
     min-height: 300px;
     padding: 2em 1em 2em 1em;
 
 }
-.arrow{
+
+.arrow {
     text-align: center;
 }
-.triangle-down{
+
+.triangle-down {
     width: 0;
-	height: 0;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
     border-top: 30px solid #a70f0c;
     margin: auto;
 }
 
 /* Card Item */
 
-.card-main{
+.card-main {
     text-align: center;
 }
-.card-main .title, .text{
+
+.card-main .title,
+.text {
     color: black;
     font-family: sans-serif;
 }
-.title{
+
+.title {
     font-weight: 600;
 }
-.text{
+
+.text {
     padding-left: 60px !important;
     padding-top: 10px;
     padding-right: 60px !important;
@@ -51,51 +58,49 @@
 
 /* Card Detail */
 
-.card-detail-main{
+.card-detail-main {
     background-color: #e8e8e8;
     text-align: center;
 }
 
-.card-detail-main:hover{
+.card-detail-main:hover {
     background-color: #e4e4e4;
 }
 
-.box-content .col table:hover{
+.box-content .col table:hover {
     background-color: #dbdbdb;
 }
 
-.box-content .col table tr:hover{
+.box-content .col table tr:hover {
     background-color: #d6cdcd;
 }
 
-.card-detail-main{
+.card-detail-main {
     height: 415px;
-
     display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 10px;
 }
-#segment-2-main{
-  
+
+.card-detail-button-container button {
+    width: 100px;
 }
-#table{
-    
+
+table td img {
+    width: 20px;
+    height: 20px;
 }
-#segment-2-main button{
-width: 100px;
+
+table tr {
+    text-align: left;
 }
- table td img{
-     width: 20px;
-     height: 20px;
- }
- table tr{
-     text-align: left;
- }
- table tr td span{
-     margin-left: 5px;
-     font-weight: bold;
- }
- #main{
-     position: relative;
- }
- 
+
+table tr td span {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+#main {
+    position: relative;
+}
