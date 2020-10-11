@@ -1,37 +1,85 @@
-import React from "react";
+import React,{useState} from "react";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import useInputState from "../../../hooks/useInputState";
-import moment from 'moment';
-
-const GuestForm = ({onSubmit}) => {
-    const [name, handleChangeName,resetName] = useInputState("");
-    const [subject, handleChangeSubject,resetSubject] = useInputState("");
-    const [message, handleChangeMessage,resetMessage] = useInputState("");
+import moment from "moment";
+import './GuestForm.css'
+const GuestForm = ({ onSubmit }) => {
+  const [name, handleChangeName, resetName] = useInputState("");
+  const [subject, handleChangeSubject, resetSubject] = useInputState("");
+  const [message, handleChangeMessage, resetMessage] = useInputState("");
+  const [nameError, handleChangeNameError] = useState(false);
+  const [subjectError, handleChangeSubjectError ] = useState(false);
+  const [messageError, handleChangeMessageError ] = useState(false);
 
   return (
     <Card
-      style={{ backgroundColor: "#222222", height: "400px",  color: "black" }}
+      style={{ backgroundColor: "#222222", height: "400px", color: "black" }}
     >
       <Card.Body>
-        <Form onSubmit={(e)=>{
+        <Form
+          onSubmit={(e) => {
             e.preventDefault();
-            onSubmit({name,date:moment().format('DD/MM/YY-hh:mm.ss'),subject,message});
+            let nameError = false,subjectError = false,messageError = false;
+            if(name === null || name === "")
+              nameError =true;
+            if(subject === null || subject === "")
+            subjectError = true;
+            if(message === null || message === "")
+              messageError =  true;
+            handleChangeNameError(nameError);
+            handleChangeSubjectError(subjectError);
+            handleChangeMessageError(messageError);
+            if(nameError || subjectError || messageError) return
+            
+
+            onSubmit({
+              name,
+              date: moment().format("DD/MM/YY-hh:mm.ss"),
+              subject,
+              message,
+            });
             resetName();
             resetSubject();
             resetMessage();
-            }}>
+          }}
+        >
           <Form.Group controlId="exampleForm.ControlInput1">
-            <Form.Control type="text" placeholder="Name" value={name} onChange={handleChangeName}/>
+            <div class="alert alert-danger" role="alert" hidden={ !nameError ? "hidden":""}>
+              Please enter your name!
+            </div>
+            <Form.Control
+              type="text"
+              placeholder="Name"
+              value={name}
+              onChange={(e)=>{handleChangeNameError(false); handleChangeName(e);}}
+            />
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlInput1">
-            <Form.Control type="text" placeholder="Subject" value={subject} onChange={handleChangeSubject} />
+          <div class="alert alert-danger" role="alert" hidden={ !subjectError ? "hidden":""}>
+              Please enter subject!
+            </div>
+            <Form.Control
+              type="text"
+              placeholder="Subject"
+              value={subject}
+              onChange={(e)=>{handleChangeSubjectError(false); handleChangeSubject(e);}}
+            />
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlTextarea1">
-            <Form.Control as="textarea" rows={6} placeholder="Message" value={message} onChange={handleChangeMessage} />
+          <div class="alert alert-danger" role="alert" hidden={ !messageError ? "hidden":""}>
+              Please enter message!
+            </div>
+            <Form.Control
+              as="textarea"
+              rows={6}
+              placeholder="Message"
+              value={message}
+              onChange={(e)=>{handleChangeMessageError(false); handleChangeMessage(e);}}
+            />
           </Form.Group>
 
           <Form.Group as={Row}>
