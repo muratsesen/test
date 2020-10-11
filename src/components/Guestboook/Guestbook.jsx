@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState} from 'react';
 import './Guestbook.css'
 import { Row,Col } from 'react-bootstrap';
 import GuestForm from './GuestForm/GuestForm';

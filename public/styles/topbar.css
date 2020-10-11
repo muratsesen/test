@@ -27,6 +27,10 @@
 .mr-auto{
     margin-left: 50px;
 }
+.navbar-nav.ml-auto img{
+    width: 34px;
+    height: 34px;
+}
 .active-link{
     color: beige !important;
 }

@@ -1,7 +1,5 @@
 import React,{useState} from "react";
 import Card from "react-bootstrap/Card";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import useInputState from "../../../hooks/useInputState";
@@ -82,12 +80,11 @@ const GuestForm = ({ onSubmit }) => {
             />
           </Form.Group>
 
-          <Form.Group as={Row}>
-            <Col sm={{ span: 10, offset: 5 }}>
+          <Form.Group className="form-button-custom">
               <Button variant="success" type="submit">
                 SEND
               </Button>
-            </Col>
+            
           </Form.Group>
         </Form>
       </Card.Body>
